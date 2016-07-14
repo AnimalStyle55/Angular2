@@ -1,0 +1,12 @@
+<div class="card">
+  <div class="card-content">
+    <div class="card-title">Starships</div>
+    <p>Can take a while to load, see console...</p>
+
+    <ul class="collection">
+      <li class="collection-item" *ngFor="let s of starships$ | async">
+        {{s.name}} (in {{s.filmName}})
+      </li>
+    </ul>
+  </div>
+</div>

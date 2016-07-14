@@ -1,0 +1,61 @@
+<div class="row">
+
+  <div class="col s4">
+    <div class="card">
+      <div class="card-content">
+        <div class="card-title">ngIf</div>
+        <p>Click the following button 8 times</p>
+        <button class="btn" (click)="increment($event)">Add One</button>
+        <div>clicks: {{n}}</div>
+        <div *ngIf="n > 7">Congratulations you have clicked {{ n }} times.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col s4">
+    <div class="card">
+      <div class="card-content">
+        <div class="card-title">ngFor</div>
+
+        <ul class="collection">
+          <li class="collection-item" *ngFor="let task of todos">{{task}}</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="row">
+
+  <div class="col s6">
+    <div class="card">
+      <div class="card-content">
+        <div class="card-title">ngFor: with index</div>
+
+        <ul class="collection">
+          <li class="collection-item"
+              *ngFor="let task of todos; let i = index">#{{i + 1}}: {{task}}</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="col s6">
+    <div class="card">
+      <div class="card-content">
+        <div class="card-title">ngFor: nested ngFor</div>
+        <ul class="collection">
+          <li class="collection-item" *ngFor="let room of rooms">
+            {{room.name}}:
+            <span *ngFor="let item of room.contents">
+              {{item}}
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>

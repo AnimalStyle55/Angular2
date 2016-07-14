@@ -1,0 +1,59 @@
+# Angular 2 Resources
+
+Oasis Digital - Angular Blog Posts
+http://blog.oasisdigital.com/category/angularjs/
+
+Oasis Digital - Class Example Repositories
+https://bitbucket.org/od-training
+
+Angular 2 Style Guide
+https://angular.io/styleguide
+
+Angular 1 to 2 Quick Reference
+https://angular.io/docs/ts/latest/cookbook/a1-a2-quick-reference.html
+
+Angular CLI
+https://cli.angular.io/
+
+Angular Resources
+https://angular.io/resources/
+
+5 Rookie Mistakes to Avoid with Angular 2
+http://angularjs.blogspot.com/2016/04/5-rookie-mistakes-to-avoid-with-angular.html
+
+Two-Way Data Binding Is Just A "Box Of Bananas" In Angular 2
+http://www.bennadel.com/blog/3008-two-way-data-binding-is-just-a-box-of-bananas-in-angular-2-beta-1.htm
+
+Angular 2 Unit Testing recipes
+https://medium.com/google-developer-experts/angular-2-unit-testing-with-jasmine-defe20421584#.xy3fdslvx
+
+Angular Router - Victor Savkin
+http://victorsavkin.com/post/145672529346/angular-router
+
+TypeScript
+https://www.typescriptlang.org/
+
+TypeScript Playground
+https://www.typescriptlang.org/play/index.html
+
+TSLint - A Linter for the TypeScript language
+http://palantir.github.io/tslint/
+
+RxJS Overview
+http://reactivex.io/rxjs/manual/overview.html
+
+RxJS Operators by Categories
+https://github.com/Reactive-Extensions/RxJS/blob/master/doc/gettingstarted/categories.md
+
+RxJS Operator "Decision Tree" (bottom of page)
+http://reactivex.io/rxjs/
+
+RxJS - Which operator do I use?
+https://xgrommx.github.io/rx-book/content/which_operator_do_i_use/index.html
+
+RxMarbles: Interactive diagrams of Rx Observables
+http://rxmarbles.com/
+
+Functional Reactive Programming for Angular 2 Developers
+http://blog.angular-university.io/functional-reactive-programming-for-angular-2-developers-rxjs-and-observables/
+

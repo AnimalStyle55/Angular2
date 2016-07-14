@@ -1,0 +1,9 @@
+<div class="card">
+  <div class="card-content">
+    <div class="card-title">Worker List: {{workerList.length}}</div>
+    <ul class="collection">
+      <li class="collection-item" *ngFor="let w of workerList">{{w.first_name}}</li>
+    </ul>
+  </div>
+  <div>{{label}}</div>
+</div>

@@ -1,0 +1,91 @@
+<h4>Hello, my favorite color is {{favoriteColor}}.</h4>
+
+<div class="row">
+
+  <div class="col s4">
+    <div class="card">
+      <div class="card-content">
+        <div class="card-title">Input</div>
+
+        <input placeholder="color" [(ngModel)]="favoriteColor">
+
+      </div>
+    </div>
+  </div>
+
+  <div class="col s4">
+    <div class="card">
+      <div class="card-content">
+        <div class="card-title">Select</div>
+        <select [(ngModel)]="favoriteColor">
+          <option value="Blue">Blue ish</option>
+          <option value="Red">Red ish</option>
+        </select>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="col s4">
+    <div class="card">
+      <div class="card-content">
+        <div class="card-title">Select: with NgFor</div>
+        <select [(ngModel)]="favoriteColor">
+          <option *ngFor="let item of colors" [value]="item.code">{{item.display}}</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="row">
+
+  <div class="col s4">
+    <div class="card">
+      <div class="card-content">
+        <div class="card-title">Radio</div>
+        <p>
+          <input [(ngModel)]="favoriteColor" name="group1" type="radio" id="1" value="Red">
+          <label for="1">Red</label>
+        </p>
+        <p>
+          <input [(ngModel)]="favoriteColor" name="group1" type="radio" id="2" value="Yellow">
+          <label for="2">Yellow</label>
+        </p>
+        <p>
+          <input [(ngModel)]="favoriteColor" name="group1" type="radio" id="3" value="Green">
+          <label for="3">Green</label>
+        </p>
+        <p>
+          <input [(ngModel)]="favoriteColor" name="group1" type="radio" id="4" value="Blue">
+          <label for="4">Blue</label>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col s4">
+    <div class="card">
+      <div class="card-content">
+        <div class="card-title">Checkbox</div>
+        <p>
+          <input id="9" type="checkbox" [(ngModel)]="show">
+          <label for="9">Show/Hide</label>
+        </p>
+        <div *ngIf="show"> Tada! </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col s4">
+    <div class="card">
+      <div class="card-content">
+        <div class="card-title">Color Swatch</div>
+        <div [style.opacity]="show ? 1:0" style="width: 100px; height: 100px" [style.background-color]="favoriteColor">
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

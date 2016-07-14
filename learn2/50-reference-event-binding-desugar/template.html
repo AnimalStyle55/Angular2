@@ -1,0 +1,61 @@
+<div class="row">
+
+  <div class="col s4">
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title">Click Events</span>
+        <p>Button has been clicked {{ n }} times.</p>
+        <button class="btn" (click)="increment()">Add One</button>
+        <div (click)="increment()"> Also a clickable thing </div>
+        <div on-click="increment()"> Alternative click syntax (1)</div>
+        <div data-on-click="increment()"> Alternative click syntax (2)</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col s4">
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title">Poor man's binding</span>
+        <input #input1 placeholder="type here" type="text" (keyup)="userInput = input1.value">
+        <p>user input: {{ userInput }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col s4">
+    <div class="card">
+      <!-- Try removing the (keyup) -->
+      <div class="card-content">
+        <span class="card-title">More new binding</span>
+        <input #input2 type="text" placeholder="type here" (keyup)="a">
+        <p>user input: {{ input2.value }}</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="row">
+
+  <div class="col s6">
+    <div class="card">
+      <div class="card-content">
+        <div class="card-title">ref- vs # syntax, on- vs () syntax</div>
+        <input ref-input3 placeholder="try it out" type="text" on-keyup="a">
+        <p>user input: {{ input3.value }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col s6">
+    <div class="card">
+      <div class="card-content">
+        <div class="card-title">Does the old A1 ng-model work?</div>
+        <input type="text" placeholder="try it out" ng-model="x">
+        <p>answer (x): {{ x }} <b>no.</b></p>
+      </div>
+    </div>
+  </div>
+
+</div>

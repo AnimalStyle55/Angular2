@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Acme Inc",
+        "phone": "555-555-5555",
+        "address": "123 Main St"
+    },
+    {
+        "name": "USR",
+        "phone": "101-010-0001",
+        "address": "3 Laws St"
+    },
+    {
+        "name": "Umbrella Corp.",
+        "phone": "999-999-9999",
+        "address": "9 Street"
+    }
+]

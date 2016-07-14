@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>SystemJS + TSC A2 Tooling</title>
+  </head>
+  <body>
+    <my-app></my-app>
+
+    <script src="lib/angular2-polyfills.js"></script>
+    <script src="lib/system-polyfills.js"></script>
+    <script src="lib/shims_for_IE.js"></script>
+
+    <script src="lib/system.js"></script>
+    <script src="lib/Rx.js"></script>
+    <script src="lib/angular2.js"></script>
+    <script src="lib/http.js"></script>
+    <script src="lib/router.js"></script>
+
+    <script src="bundle.js"></script>
+
+    <script>
+      System.import("app").catch(console.error.bind(console));
+    </script>
+  </body>
+</html>

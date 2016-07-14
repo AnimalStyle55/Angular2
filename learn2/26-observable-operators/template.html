@@ -1,0 +1,22 @@
+<h4>Incremental Search (via an API):</h4>
+
+<form [formGroup]="searchForm">
+  Search reddit.com/r/aww/ for:
+  <input type="text" formControlName="searchControl">
+</form>
+
+<div>
+  <div class="box" *ngFor="let r of results | async">
+    <small> {{r.title}} </small>
+    <img *ngIf="r.url" [src]="r.url">
+  </div>
+</div>
+
+<style>
+  .box {
+    float: left;
+    width: 140px;
+    height: 140px;
+    padding: 5px;
+  }
+</style>

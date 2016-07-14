@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>ES5 A2 App</title>
+    <link rel="stylesheet" href="../minimal_lib/style.css">
+  </head>
+  <body>
+    <nav>
+      <div class="nav-wrapper">
+        <div class="brand-logo left">
+          <a href="http://www.angularbootcamp.com"></a>
+          <span>ES5 (JavaScript)</span>
+        </div>
+        <ul class="right">
+          <li><a target="_blank" href="https://angular.io/docs/js/latest/quickstart.html">A2 Docs</a></li>
+          <li><a href="../">Lesson List</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <my-app>loading...</my-app>
+    </div>
+
+    <!-- Beta 17 from a CDN... as of rc.1, Google does not ship ready-to-use bundles. -->
+    <!-- Polyfills put tomorrow's browser features in today. -->
+    <script src="https://code.angularjs.org/2.0.0-beta.17/angular2-polyfills.js"></script>
+    <!-- Use the "UMD"s if you are coding in ES5 -->
+    <script src="https://code.angularjs.org/2.0.0-beta.17/Rx.umd.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-beta.17/angular2-all.umd.js"></script>
+
+    <script src="app.js"></script>
+  </body>
+</html>

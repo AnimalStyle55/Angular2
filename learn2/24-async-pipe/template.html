@@ -1,0 +1,22 @@
+<div class="card">
+  <div class="card-content">
+    <div class="card-title">Ships (1)</div>
+    <ul class="collection">
+      <li class="collection-item" *ngFor="let s of ships1 | async">
+        {{s.name}} (in {{s.filmName}})
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-content">
+    <div class="card-title">Ships (2)</div>
+    <ul class="collection">
+      <li class="collection-item" *ngFor="let s of ships2 | async">
+        {{s.name}} (in {{s.filmName}})
+      </li>
+    </ul>
+  </div>
+</div>
+

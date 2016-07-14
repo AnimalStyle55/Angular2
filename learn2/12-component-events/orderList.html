@@ -1,0 +1,17 @@
+<div class="card">
+  <span class="component-marker">OrderList</span>
+  <div class="card-content">
+    <div class="card-title">Choose an Order</div>
+    <div class="collection">
+      <li *ngFor="let o of orders">
+        <a href="#" class="collection-item" (click)="select(o)">{{o.id}} : {{o.customer}}</a>
+      </li>
+    </div>
+  </div>
+</div>
+
+<style>
+  li {
+    list-style: none;
+  }
+</style>

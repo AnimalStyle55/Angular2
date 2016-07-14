@@ -1,0 +1,36 @@
+<div class="row">
+  <form class="col s12">
+
+    <div class="row">
+      <h4>Two-way binding in action [(banana in a box)]</h4>
+      <div class="col s4">
+        <label>Name: <input [(ngModel)]="name"></label>
+      </div>
+      <div class="col s4">
+        <label>Name: <input [(ngModel)]="name"></label>
+      </div>
+    </div>
+
+    <div class="row">
+      <h4>The same, but with less syntax sugar</h4>
+      <div class="col s4">
+        <label>Color: <input [ngModel]="color" (ngModelChange)="color=$event;showEvent($event)"></label>
+      </div>
+      <div class="col s4">
+        <label>Color: <input [ngModel]="color" (ngModelChange)="color=$event"></label>
+      </div>
+    </div>
+
+    <div class="row">
+      <h4>The same, even less syntax sugar</h4>
+      <div class="col s4">
+        <label>Color: <input bind-ngModel="color" on-ngModelChange="color=$event"></label>
+      </div>
+      <div class="col s4">
+        <label>Color: <input bind-ngModel="color" on-ngModelChange="color=$event"></label>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showEvent($event)">Click Me</button>
+  </form>
+</div>

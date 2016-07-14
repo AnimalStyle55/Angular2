@@ -1,0 +1,40 @@
+<div class="row" style="margin-top: 15px">
+  <div class="col s4">
+    <button class="btn" (click)="increment($event)">Add One</button> {{n}}
+  </div>
+</div>
+
+<div class="row">
+
+  <div class="col s4">
+    <div class="card">
+      <div class="card-content">
+        <div class="card-title">ngSwitch: on values</div>
+        <div [ngSwitch]="n > 5">
+          <span *ngSwitchCase="false">Seen a little</span>
+          <span *ngSwitchCase="true">Seen a lot.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col s4">
+    <div class="card">
+      <div class="card-content">
+        <div class="card-title">ngSwitch: on predicates</div>
+        <div [ngSwitch]="n">
+          <div *ngSwitchCase="0">Seen zero</div>
+          <div *ngSwitchCase="1">Seen once</div>
+          <div *ngSwitchCase="results()">2...4</div>
+          <div *ngSwitchDefault>Seen {{n}} times</div>
+        </div>
+
+        <div [ngSwitch]="food">
+          <span *ngSwitchCase="'apple'">Shiny Apple</span>
+          <span *ngSwitchCase="'banana'">Yellow Banana</span>
+          <span *ngSwitchDefault>other</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

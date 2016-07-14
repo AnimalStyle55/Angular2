@@ -1,0 +1,22 @@
+<h4>Interact with the following controls with the console open</h4>
+<div class="row">
+  <div class="col s3">
+    <input type="checkbox" id="check" [(ngModel)]="showing">
+    <label for="check">Show Workers</label>
+  </div>
+  <div class="col s3">
+    <input id="testVal" [(ngModel)]="testVal">
+    <label for="testVal">testVal</label>
+  </div>
+  <div class="col s3">
+    <input [(ngModel)]="testVal2">
+    <label>testVal2</label>
+  </div>
+  <div class="col s3">
+    <input [(ngModel)]="testVal3">
+    <label>testVal3</label>
+  </div>
+</div>
+<div class="row">
+  <worker-cmp [label]="testVal" [label2]="testVal2" *ngIf="showing"></worker-cmp>
+</div>

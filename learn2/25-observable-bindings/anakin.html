@@ -1,0 +1,23 @@
+<div class="card">
+  <div class="card-content">
+    <div class="card-title">Anakin Component</div>
+    <input id="show" type="checkbox" [(ngModel)]="showData">
+    <label for="show">Show Anakin Data</label>
+    <div *ngIf="showData">
+      <h5>Anakin Data</h5>
+      <pre> {{ name$ | async }} </pre>
+
+      <h5>Anakin Time</h5>
+      <pre> {{ time$ | async }} </pre>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-content">
+    <div class="card-title">Another Binding</div>
+    <input id="extra" type="checkbox" [(ngModel)]="showExtraTime">
+    <label for="extra">Show Time Data </label>
+    <pre *ngIf="showExtraTime"> {{ time$ | async }} </pre>
+  </div>
+</div>

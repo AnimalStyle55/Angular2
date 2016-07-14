@@ -1,0 +1,44 @@
+<h4>Login Form</h4>
+<div class="row">
+  <form #loginForm="ngForm" (ngSubmit)="onLogin()" novalidate>
+
+    <div class="col s6">
+      <label for="usernameId">Login</label>
+      <input id="usernameId"
+          name="username"
+          type="text"
+          required
+          #usernameControl="ngModel"
+          [(ngModel)]="credentials.login">
+          <pre>{{usernameControl.valid | json}}</pre>
+    </div>
+    <div class="col s6">
+      <label for="passwordId">Password</label>
+      <input id="passwordId"
+        name="password"
+        type="password"
+        required
+        minlength="3"
+        #passwordControl="ngModel"
+        [(ngModel)]="credentials.password">
+      <pre>{{passwordControl.valid | json}}</pre>
+    </div>
+    <button class="btn"
+        [disabled]="!loginForm.form.valid"
+        [class.disabled]="!loginForm.form.valid">
+      Login
+    </button>
+  </form>
+</div>
+<div class="row">
+  <div class="col s12 card">
+    <div class="card-content">
+      <div class="card-title">Data behind the login form
+        <div>Form Object:</div>
+        <pre>{{loginForm.form.value | json}}</pre>
+        <div>Form Validity:</div>
+        <pre>{{loginForm.form.valid | json}}</pre>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="card">
+  <div class="component-marker">
+    AppComponent
+  </div>
+  <div class="card-content">
+    <div class="card-title">Order Management Application</div>
+    <div class=row>
+      <div class="col s12">
+        <button class="btn" (click)="choose(0)">Choose First Order</button>
+        <button class="btn" (click)="choose(1)">Choose Second Order</button>
+      </div>
+    </div>
+    <div class="row">
+      <order-list class="col s6" [orders]="appOrders"></order-list>
+      <order-details class="col s6" [selectedOrderDetails]="order"></order-details>
+    </div>
+  </div>
+</div>

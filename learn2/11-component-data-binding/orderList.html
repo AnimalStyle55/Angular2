@@ -1,0 +1,13 @@
+<div class="card">
+  <div class="component-marker">
+    OrderList
+  </div>
+  <div class="card-content">
+    <div class="card-title">Choose an order using buttons above</div>
+    <ul class="collection">
+      <li class="collection-item" *ngFor="let o of orders">
+        {{o.id}} : {{o.customer}}
+      </li>
+    </ul>
+  </div>
+</div>

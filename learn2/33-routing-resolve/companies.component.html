@@ -1,0 +1,8 @@
+<div class="card">
+  <div class="card-content">
+    <div class="card-title">Company Contact</div>
+    <ul class="collection">
+      <li class="collection-item" *ngFor="let company of companies$ | async">{{company.name}}</li>
+    </ul>
+  </div>
+</div>

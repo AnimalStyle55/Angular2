@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Event Bindings</title>
+    <link rel="stylesheet" href="../minimal_lib/style.css">
+  </head>
+  <body>
+    <nav>
+      <div class="nav-wrapper">
+        <div class="brand-logo left">
+          <a href="http://www.angularbootcamp.com"></a>
+          <span>Event Bindings</span>
+        </div>
+        <ul class="right">
+          <li><a target="_blank" href="https://angular.io/docs/ts/latest/guide/template-syntax.html" class="">Template Syntax</a></li>
+          <li><a href="../">Lesson List</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <my-app>loading...</my-app>
+    </div>
+
+    <script src="../minimal_lib/abc2.js"></script>
+    <script>
+      System.import('./app.ts').catch(console.error.bind(console));
+    </script>
+  </body>
+</html>

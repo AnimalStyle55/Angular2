@@ -1,0 +1,28 @@
+<!-- Following kept free of styling to aid in demonstration -->
+<h4>My {{version}} Angular 2 App</h4>
+
+<p>Hello, {{person}}</p>
+
+<p [innerText]="person"></p>
+
+<h4>Expressions</h4>
+<p>3 + 4 = {{ 3 + 4 }}</p>
+<p>My mother is {{ personObject.mother + "!!" }}</p>
+
+<p>Function result is {{ calculate() }}</p>
+
+<p>In some earlier alphas, this would be an error:</p>
+<p>Made up variable: {{ madeUpVariableName }}</p>
+
+<h4>Sanitization</h4>
+<p>As of rc-4, this is sanitized by <b>Angular</b>:</p>
+<p [innerHtml]="stringWithHtml"></p>
+
+<p>If you bind to innerText, the <b>browser</b> does it (note the different output):</p>
+<p [innerText]="stringWithHtml"></p>
+
+<p [style.color]="color">Age: {{age}}</p>
+
+<p style="color:red">Age: {{age}}</p>
+
+<input type="text" [(ngModel)]="text"/>

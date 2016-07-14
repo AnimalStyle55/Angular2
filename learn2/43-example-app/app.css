@@ -1,0 +1,50 @@
+.meme {
+  max-width: 100%;
+}
+
+.archetype-panel {
+  width: 220px;
+  border: 1px solid black;
+  padding: 5px;
+  display: block;
+}
+
+dl.dl-horizontal dt {
+  font-weight: normal;
+  font-size: 12px;
+  width: 90px;
+}
+
+dl.dl-horizontal dd {
+  font-weight: bold;
+  margin-left: 95px;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.character-card-heading {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+character-card hr {
+  margin: 5px 0px;
+}
+
+button.pref-button {
+  border: 1px solid cornflowerblue;
+  background-color: #f1f1f1;
+  color: cornflowerblue;
+}
+button.pref-button.selected {
+  border: #f1f1f1;
+  background-color: cornflowerblue;
+  color: #f1f1f1;
+}
+
+a.disabled {
+    pointer-events: none;
+}

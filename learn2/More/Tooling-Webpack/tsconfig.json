@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "declaration": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "module": "commonjs",
+    "noImplicitAny": false,
+    "noLib": false,
+    "removeComments": true,
+    "target": "es5",
+    "sourceMap": true
+  },
+  "files": [
+    "www/app/app.ts",
+    "www/app/lib.ts",
+    "typings/browser.d.ts"
+  ]
+}

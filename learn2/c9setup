@@ -1,0 +1,32 @@
+# Run me with "source":
+# . c9setup
+
+# Choose latest Node 6.x
+nvm install 6
+nvm use 6
+nvm alias default 6
+
+# Install typings for the learn2 kit, just in case C9 adds TypeScript help
+npm install
+
+# Install global tools
+npm install -g live-server
+npm install -g angular-cli@1.0.0-beta.9
+
+# Create new CLI application, specify versions;
+# beta.9 ends up with an inconsistent set of versions.
+cd ~/workspace
+ng new workshop-app --skip-npm
+
+cd workshop-app
+sed -i 's/2.0.0-rc.3/2.0.0-rc.4/g' package.json
+sed -i 's/3.0.0-alpha.8/3.0.0-beta.2/g' package.json
+npm install
+
+echo '{ "port": 8081, "live-reload-port": 8082}' >.ember-cli
+
+# run live-server, ready to start class.
+cd ~/workspace
+cd learn2
+echo "Use 'Preview Running Application' to obtain the served URL..."
+live-server

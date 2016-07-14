@@ -1,0 +1,7 @@
+<div class="card">
+  <div *ngIf="selectedOrderDetails" class="card-content">
+    <div class="card-title">Order Details</div>
+    <order-header [customerName]="selectedOrderDetails.customer"></order-header>
+    <order-items [items]="selectedOrderDetails.items"></order-items>
+  </div>
+</div>

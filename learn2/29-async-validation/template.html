@@ -1,0 +1,31 @@
+<h4>Login Form</h4>
+<form [formGroup]="inputFormGroup" (ngSubmit)="onLogin()">
+  <div class="row">
+    <div class="col s6">
+      <label>
+        <span>Enter Input</span>
+        <input type="text" formControlName="input">
+        {{inputFormGroup.controls.input.errors | json}}
+      </label>
+    </div>
+    <div class="col s6">
+      <label>
+        <span>Enter a Western ZIP code</span>
+        <input type="text" formControlName="zip">
+        {{inputFormGroup.controls.zip.errors | json}}
+        <span *ngIf="inputFormGroup.controls.zip.pending">Pending</span>
+      </label>
+    </div>
+  </div>
+  <button disabled="!inputFormGroup.valid" class="btn"
+         [class.disabled]="!inputFormGroup.valid" >Login</button>
+</form>
+
+<div class="card">
+  <div class="card-content">
+    <div class="card-title">Data behind the login form</div>
+    Form Object:<pre>{{inputFormGroup.value | json}}</pre>
+    Form Validity:<pre>{{inputFormGroup.valid | json}}</pre>
+    <button class="btn" (click)="logTheForm()">Console.log form state</button>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="card">
+  <div class="card-content">
+    <div class="card-title">Layer 3 Component: </div>
+    <div class="card">
+      <div class="card-content">
+        <span>Layer 3 Unshared Data: {{unsharedValue}}</span>
+        <button class="btn btn-default" (click)="incUnshared()">Increment</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-content">
+        <div class="card-title">Layer 3 Shared Data: {{shared.userInput}}</div>
+        <input type="text" [(ngModel)]="shared.userInput">
+      </div>
+    </div>
+  </div>
+</div>

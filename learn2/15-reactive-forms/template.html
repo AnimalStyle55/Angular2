@@ -1,0 +1,31 @@
+<h4>Login Form</h4>
+<form [formGroup]="loginFormGroup" (ngSubmit)="onLogin()">
+  <div class="row">
+    <div class="col s4">
+      <label for="username">Login</label>
+      <input id="username" type="text" formControlName="login">
+      {{loginFormGroup.controls.login.valid}}
+    </div>
+    <div class="col s4">
+      <label for="password">Password</label>
+      <input id="password" type="password" formControlName="password">
+      {{loginFormGroup.controls.password.valid}}
+    </div>
+    <div class="col s4">
+      <label for="optional"> Example of an optional val:</label>
+      <input id="optional" type="text" formControlName="optional">
+      {{loginFormGroup.controls.optional.valid}}
+    </div>
+  </div>
+  <button class="btn" [disabled]="!loginFormGroup.valid"
+    [class.disabled]="!loginFormGroup.valid">Login</button>
+</form>
+<div class="card">
+  <div class="card-content">
+    <div class="card-title">Data behind the login form</div>
+    Form Object:<pre>{{loginFormGroup.value | json}}</pre>
+    Form Validity:<pre>{{loginFormGroup.valid | json}}</pre>
+    <button class="btn" (click)="logTheForm()">Console.log form state</button>
+  </div>
+</div>
+

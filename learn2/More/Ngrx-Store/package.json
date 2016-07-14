@@ -1,0 +1,31 @@
+{
+  "name": "a2-systemjs-tsc",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "scripts": {
+    "clean": "npm install rimraf && rimraf typings www/lib/*.js www/bundle.* node_modules",
+    "postinstall": "node copy-libs.js && tsc",
+    "watch": "tsc --watch",
+    "start": "live-server www --wait=300"
+  },
+  "author": "Oasis Digital <info@oasisdigital.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@ngrx/store": "1.3.3",
+    "angular2": "2.0.0-beta.15",
+    "es6-shim": "^0.35.0",
+    "reflect-metadata": "0.1.2",
+    "rxjs": "5.0.0-beta.2",
+    "systemjs": "0.19.26",
+    "zone.js": "0.6.11"
+  },
+  "devDependencies": {
+    "bluebird": "^3.3.5",
+    "copyfiles": "^0.2.1",
+    "live-server": "^0.9.2",
+    "rimraf": "^2.5.2",
+    "tslint": "^3.7.4",
+    "typescript": "^1.8.10"
+  }
+}

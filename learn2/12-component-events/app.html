@@ -1,0 +1,16 @@
+<div class="card">
+  <span class="component-marker">AppComponent</span>
+  <div class="card-content">
+    <div class="card-title">Order Management Application</div>
+    <div class="row">
+
+      <order-list class="col s6"
+          (selectOrder)="setAppOrder($event)"
+          [orders]="appOrders"></order-list>
+
+      <order-details class="col s6"
+          [selectedOrderDetails]="order"></order-details>
+
+    </div>
+  </div>
+</div>

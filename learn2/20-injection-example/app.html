@@ -1,0 +1,9 @@
+<div class="card">
+  <div class="card-content">
+    <div class="card-title">Current Order</div>
+    <div class="row">
+      <order-list class="col s6" (selectOrder)="setAppOrder($event)" [orders]="appOrders"></order-list>
+      <order-details class="col s6" [selectedOrderDetails]="order"></order-details>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+<h4>Login Form</h4>
+<form [formGroup]="loginFormGroup" (ngSubmit)="onLogin()">
+  <div class="row">
+    <div class="col s3">
+      <label>
+        <span>Login</span>
+        <input type="text" formControlName="login">
+        <span *ngIf="loginFormGroup.controls.login.errors?.required">Username is required</span>
+      </label>
+    </div>
+    <div class="col s3">
+      <label>
+        <span>Password</span>
+        <input type="password" formControlName="password">
+        <span *ngIf="loginFormGroup.controls.password.errors?.required">Password is required</span>
+      </label>
+    </div>
+    <div class="col s3">
+      <label>
+        <span>Password</span>
+        <input type="password" formControlName="confirmPassword">
+        <span *ngIf="loginFormGroup.errors?.mismatched">Passwords must match</span>
+      </label>
+    </div>
+    <div class="col s3">
+      <label>
+        <span>Please enter 5 here:</span>
+        <input type="text" formControlName="enterFive">
+      </label>
+    </div>
+  </div>
+  <button disabled="!loginFormGroup.valid" class="btn"
+         [class.disabled]="!loginFormGroup.valid" >Login</button>
+</form>
+
+<div class="card">
+  <div class="card-content">
+    <div class="card-title">Data behind the login form</div>
+    Form Object:<pre>{{loginFormGroup.value | json}}</pre>
+    Form Validity:<pre>{{loginFormGroup.valid | json}}</pre>
+    <button class="btn" (click)="logTheForm()">Console.log form state</button>
+  </div>
+</div>
